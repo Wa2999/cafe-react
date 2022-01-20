@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Review from "../components/Review";
+import img3 from "../img/img6.webp";
+import { Link } from "react-router-dom";
 
 function OneProfile() {
   const { profileId } = useParams();
