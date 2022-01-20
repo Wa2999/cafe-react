@@ -11,6 +11,7 @@ function Review(props) {
   return (
     <>
       <div class="viewreview">
+        <b>{review.user.firstName}</b>
         <Rating
           ratingValue={review.ratingAverage * 20}
           iconsCount={5}
