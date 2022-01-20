@@ -7,7 +7,7 @@ import firebase from "firebase";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAR7TQVi_rCoVdDrYaLsy_YC7OE3MxYeq0",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: "cafe-database-5fdf3.firebaseapp.com",
   projectId: "cafe-database-5fdf3",
   storageBucket: "cafe-database-5fdf3.appspot.com",
