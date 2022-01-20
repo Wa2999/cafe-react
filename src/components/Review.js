@@ -1,18 +1,20 @@
 import img from "../img/clear.png";
 import img2 from "../img/check.png";
 import { Rating } from "react-simple-star-rating";
+import { Link } from "react-router-dom";
 
 function Review(props) {
   const { review } = props;
 
   return (
     <>
-    
       <div class="viewreview">
-      <b>{review.user.firstName}{review.user.firstName}</b>
-
-
-      <br/>
+        <Link to="https://cafe-react-299.herokuapp.com/profile">
+          <b>
+            {review.user.firstName} {review.user.lastName}
+          </b>
+        </Link>
+        <br />
 
         <Rating
           ratingValue={review.ratingAverage * 20}
