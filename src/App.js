@@ -15,7 +15,7 @@ import firebase from "./utils/firebase";
 import AddReview from "./pages/AddReview";
 import Follows from "./pages/Follows";
 import EmailVerified from "./components/EmailValidate";
-import OneProfile from "./pages/oneProfile";
+import OneProfile from "./pages/OneProfile";
 
 function App() {
   const [cities, setCity] = useState([]);
