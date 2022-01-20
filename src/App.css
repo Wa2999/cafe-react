@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+/* nav bar */
+
+ #navbar {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Acme', sans-serif;
+  align-items: center;
+  padding: 1rem;
+  position:fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  background-color:rgba(0, 0, 0, 0.411);
+}
+
+
+#logo-main {
+  width:50px;
+  color:#FFFFFF;
+  font-size: 33px;
+  font-family: 'Raleway', sans-serif;
+}
+
+  #navbar ul{
+    list-style: none;
+    display: flex;
+  }
+
+  #navbar ul li a{
+    color:#FFFFFF;
+    padding:1rem;
+    text-decoration: none;
+  }
+  #navbar ul li a:hover{
+    background-color:#070000;
+    border-radius: 5px;
+  } 
+
+
+/* video */
+
+  .video{
+    width: 100%;
+    height: 30%;
+	margin-bottom: -250px;
+    transform: translateY(-40%);
+  }
+
+
+
+  /* login & signup*/
+
+  .logindiv {
+    width: 100%;
+    margin-bottom: 250px;
+}
+.mdc-button{
+  color:#FFFFFF;
+  background-color:#6B513F;
+  border-color:#6B513F ;
+  width: 100%;
+  height: 40px;
+}
+.unLogin {
+  color:#696969;
+}
+
+.unLogin a {
+  text-decoration:none;
+  color:#7B3914;
+
+}
+.logindiv h1{
+  text-align: center;
+  padding-top: 150px;
+  color:#9E8070;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+   /* card */
+.cards {
+  display: flex;
+ justify-content:center;
+ gap:40px;
+
+}
+.card {
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+   display: flex;
+  flex-direction: column; 
+  overflow: hidden;
+}
+.card:hover .card__image {
+  filter: contrast(100%);
+}
+.card__image{
+  width:350px;
+  height: 200px;
+}
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+.card__image {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 10%;
+}
+
+.card__title {
+  color: #696969;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.citybtn{
+  color:#7B3914;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+
+}
+.citybtn:hover{
+  color:#070000;
+}
+
+
+/* onecity */
+.cityname{
+  margin-top:100px;
+  text-transform: uppercase;
+  color:#7B3914;
+  font-family: 'Acme', sans-serif;
+}
+
+#citytop{
+  text-align: center;
+  padding: 15px;
+  color:#7B3914;
+}
+
+
+ /* profile */
+
+.container {
+	max-width: 93.5rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.profile {
+	padding: 5rem 0;
+  background-color:#F9FAE4;
+
+}
+
+.profile-image {
+	float: left;
+	width: calc(33.333% - 1rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-image img {
+	border-radius: 50%;
+  width:150px;
+  height: 150px;
+}
+
+.profile-stats 
+ {
+  margin-top: 2.3rem;
+	float: left;
+	width: calc(66.666% - 2rem);
+}
+.profile-stat-count{
+  text-decoration: none;
+  color: #7B3914;
+}
+
+.profile-user-name {
+	display: inline-block;
+	font-size: 3.2rem;
+	font-weight: 300;
+}
+
+.profile-edit-btn {
+	font-size: 1.4rem;
+	background-color:#9E8070;
+	border: 0.1rem solid #dbdbdb;
+	border-radius: 0.3rem;
+	padding: 2px;
+	margin-left: 20rem;
+}
+
+
+
+/* review */
+.follow-profile{
+  display: flex;
+  flex-direction: column;
+  padding:30px;
+  margin: 150px;
+	border: 0.1rem solid #dbdbdb;
+}
+.follow-profile h3{
+  padding:25px;
+}
+.followh1{
+  padding: 15px;
+  text-align: center;
+  background-color:#F9FAE4;
+}
+.follow-profile img{
+width: 100px;
+height: 100px;
+border:2px solid #CBD1D7;}
+.review{
+	background-color:#F9FAE4;
+	padding: 50px;
+	margin: 150px;
+}
+.reviewheadline{
+  color:#593523;
+  padding: 10px;
+}
+.recomendrev{
+  padding:15px;
+}
+.addrev{
+  display: flex;
+  justify-content: center;
+  padding:20px;
+  gap:50px;
+}
+.addrev h1{
+  margin-top: 20px;
+  color:#593523;
+}
+.send-rev{
+  background-color:#593523;
+  border-color:#593523;
+  padding: 10px;
+  color:white;
+  margin-left: 750px;
+  margin-top: 10px;
+}
+.del-rev{
+  background-color:#593523;
+  border-color:#593523;
+  padding: 10px;
+  color:white;
+}
+.profile-rev{
+  margin-top:100px;
+}
+.loader {
+	width: 5rem;
+	height: 5rem;
+	border: 0.6rem solid #999;
+	border-bottom-color: transparent;
+	border-radius: 50%;
+	margin: 0 auto;
+  margin-top: 200px;
+	animation: loader 500ms linear infinite;
+}
+.viewreview{
+  border-style: ridge;
+  margin: 100px;
+  padding: 50px;
+  width:55%;
+  background-color:#F9FAE4;
+}
+.titelreview{
+  color:#593523;
+  margin-bottom: -55px ;
+  margin-top: -180px ;
+  margin-left:90px;
+}
+/* onecity */
+.cafe{
+margin-top:25px;
+padding: 50px;
+margin: 80px;
+margin-bottom: 200px;
+display: flex;
+justify-content: center;
+border: solid 1px #ccc;
+}
+.cafetitle{
+text-align: center;	
+  color: #7B3914;
+margin-top:100px;
+
+}
+.cafe-img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	 float: left;
+	padding:15px;
+	width: 100px;
+	height: 100px;
+}
+.revpage{
+  display: inline;
+  padding:20px;
+}
+
+/* oneCafe */
+.oneCafe{
+	display: flex;
+	margin:100px;
+	padding:30px;
+	gap:20px;
+	border-style: ridge;
+	border-top: white;
+	
+}
+.oneCafe h3{
+	padding-top: 30px;
+}
+.oneCafe img{
+	width: 100px;
+	height: 100px;
+	border:2px solid #CBD1D7;
+	
+}
+ .to-review{
+	background-color:#79523A;
+	color: white;
+	border: 1px solid #79523A;
+	padding:10px 10px;
+	
+	  }
+    
+ .btnfollow{
+	background-color:#79523A;
+	color: white;
+	border: 1px solid #79523A;
+	padding:5px 5px;
+  height: 45px;
+  width: 80px;
+}  
+
+.follows{
+  color:#79523A;
+}
+.btns{
+	display: flex;
+  margin-left: 550px;
+  margin-top: 50px;
+  gap:20px;
+}
+
+
+/* footer */
+
+.footerdiv {
+background-color:#F9FAE4;
+  text-align: center;
+  padding: 30px;
+  color:#6B4F4F;
+  margin-top: 700px;
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+}
+.footerdiv h6{
+font-weight:20px;
+}
+
+.mdc-text-field__input{
+  margin-top:150px;
+}
+.homepage {
+  margin-bottom:250px;
+  min-height: 100vh;
+}
+
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+#root {
+ min-height: 100vh;
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px;
+}
+
+
+
+.vrification{
+  margin-top:150px;
+  text-align:center;
+  color:#6B4F4F;
+  background-color:#F9FAE4;
+
+}
+/* ............. */
