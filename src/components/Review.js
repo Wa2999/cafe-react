@@ -9,7 +9,7 @@ function Review(props) {
   return (
     <>
       <div class="viewreview">
-        <Link to="https://cafe-react-299.herokuapp.com/profile">
+        <Link to={`/profile/${profile._id}`}>
           <b>
             {review.user.firstName} {review.user.lastName}
           </b>
