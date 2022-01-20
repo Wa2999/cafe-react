@@ -26,7 +26,9 @@ function App() {
 
   const getCities = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/cities");
+      const response = await axios.get(
+        "https://cafe-api-299.herokuapp.com/api/cities"
+      );
       setCity(response.data);
       console.log(response.data);
     } catch (error) {
@@ -36,7 +38,9 @@ function App() {
 
   const getCafe = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/coffeeShop");
+      const response = await axios.get(
+        "https://cafe-api-299.herokuapp.com/api/coffeeShop"
+      );
       setCafe(response.data);
       console.log(response.data);
     } catch (error) {
@@ -45,7 +49,9 @@ function App() {
   };
   const getReviwes = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/review`);
+      const response = await axios.get(
+        `https://cafe-api-299.herokuapp.com/api/review`
+      );
       setReview(response.data);
       console.log(response.data);
     } catch (error) {
@@ -62,7 +68,7 @@ function App() {
   const followcafe = async (coffeeShopId) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/coffeeShop/${coffeeShopId}/follows`,
+        `https://cafe-api-299.herokuapp.com/api/coffeeShop/${coffeeShopId}/follows`,
         {
           headers: {
             Authorization: localStorage.tokenCoffee,
@@ -112,7 +118,7 @@ function App() {
         lengthofEmployment: form.elements.lengthofEmployment.value,
       };
       await axios.post(
-        `http://localhost:5000/api/review/${cafeId}/review`,
+        `https://cafe-api-299.herokuapp.com/api/review/${cafeId}/review`,
         reviewBody,
         {
           headers: {
@@ -134,11 +140,14 @@ function App() {
 
   const deleteReview = async (reviewId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/review/${reviewId}`, {
-        headers: {
-          Authorization: localStorage.tokenCoffee,
-        },
-      });
+      await axios.delete(
+        `https://cafe-api-299.herokuapp.com/api/review/${reviewId}`,
+        {
+          headers: {
+            Authorization: localStorage.tokenCoffee,
+          },
+        }
+      );
       toast.success("reviwe deleted");
       getProfile();
       getCafe();
@@ -152,25 +161,27 @@ function App() {
     try {
       const form = e.target;
       const image = form.elements.avatar.files[0];
-      let imageUrl
-      if(image){
+      let imageUrl;
+      if (image) {
         const imageRef = firebase
-        .storage()
-        .ref("images")
-        .child(`${image.lastModified}-${image.name}`);
-      await imageRef.put(image);
-      imageUrl = await imageRef.getDownloadURL();
+          .storage()
+          .ref("images")
+          .child(`${image.lastModified}-${image.name}`);
+        await imageRef.put(image);
+        imageUrl = await imageRef.getDownloadURL();
       }
-      
 
       const userBody = {
         firstName: form.elements.firstName.value,
         lastName: form.elements.lastName.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
-        avatar: imageUrl|| undefined,
+        avatar: imageUrl || undefined,
       };
-      await axios.post("http://localhost:5000/api/auth/signup", userBody);
+      await axios.post(
+        "https://cafe-api-299.herokuapp.com/api/auth/signup",
+        userBody
+      );
       toast.success("signup success");
 
       navigate("/login");
@@ -187,7 +198,7 @@ function App() {
         password: form.elements.password.value,
       };
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://cafe-api-299.herokuapp.com/api/auth/login",
         userBody
       );
       const tokenCoffee = response.data;
@@ -208,11 +219,14 @@ function App() {
   };
 
   const getProfile = async () => {
-    const response = await axios.get("http://localhost:5000/api/auth/profile", {
-      headers: {
-        Authorization: localStorage.tokenCoffee,
-      },
-    });
+    const response = await axios.get(
+      "https://cafe-api-299.herokuapp.com/api/auth/profile",
+      {
+        headers: {
+          Authorization: localStorage.tokenCoffee,
+        },
+      }
+    );
     setProfile(response.data);
   };
 
@@ -238,11 +252,15 @@ function App() {
         avatar: imageUrl,
       };
 
-      await axios.put(`http://localhost:5000/api/auth/profile`, profileBody, {
-        headers: {
-          Authorization: localStorage.tokenCoffee,
-        },
-      });
+      await axios.put(
+        `https://cafe-api-299.herokuapp.com/api/auth/profile`,
+        profileBody,
+        {
+          headers: {
+            Authorization: localStorage.tokenCoffee,
+          },
+        }
+      );
       getProfile();
       toast.success("edit ur profile success");
     } catch (error) {

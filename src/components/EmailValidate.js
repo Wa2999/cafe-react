@@ -10,7 +10,9 @@ function EmailVerified() {
 
   const verifyEmailToken = async () => {
     try {
-      await axios.get(`http://localhost:5000/api/auth/verify_email/${token}`);
+      await axios.get(
+        `https://cafe-api-299.herokuapp.com/api/auth/verify_email/${token}`
+      );
       toast.success("email verfied");
       navigate("/login");
     } catch (error) {
@@ -24,7 +26,11 @@ function EmailVerified() {
     verifyEmailToken();
   }, []);
 
-  return error ? <h1 className="vrification">Vrification failed</h1> : <h1>Verifying...</h1>;
+  return error ? (
+    <h1 className="vrification">Vrification failed</h1>
+  ) : (
+    <h1>Verifying...</h1>
+  );
 }
 
 export default EmailVerified;
