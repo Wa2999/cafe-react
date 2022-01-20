@@ -1,10 +1,7 @@
 import { useContext } from "react";
-import { Button, Card, Col, Image, Row } from "react-bootstrap";
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
 import CoffeshopCard from "../components/CoffeeshopCard";
 import CoffeeContext from "../utils/CoffeeContext";
-import Follows from "./Follows";
 
 function OneCity() {
   const { cityId } = useParams();

@@ -2,13 +2,12 @@ import { useContext, useState } from "react";
 import ProfileEditModal from "../components/ProfileEditModal";
 import CoffeeContext from "../utils/CoffeeContext";
 import { AiOutlineEdit } from "react-icons/ai";
-
 import img3 from "../img/img6.webp";
 import { Link } from "react-router-dom";
 import ReviewProfile from "../components/ReviewProfile";
 
 function Profile() {
-  const { profile, deleteReview } = useContext(CoffeeContext);
+  const { profile } = useContext(CoffeeContext);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);

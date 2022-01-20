@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import CoffeeContext from "../utils/CoffeeContext";
-import { Box, Button, TextField } from "@material-ui/core";
+import { Box, TextField } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 function Login() {

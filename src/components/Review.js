@@ -1,17 +1,19 @@
-import { useContext } from "react";
-import CoffeeContext from "../utils/CoffeeContext";
 import img from "../img/clear.png";
 import img2 from "../img/check.png";
 import { Rating } from "react-simple-star-rating";
 
 function Review(props) {
   const { review } = props;
-  const { deleteReview, profile } = useContext(CoffeeContext);
 
   return (
     <>
+    
       <div class="viewreview">
-        <b>{review.user.firstName}</b>
+      <b>{review.user.firstName}{review.user.firstName}</b>
+
+
+      <br/>
+
         <Rating
           ratingValue={review.ratingAverage * 20}
           iconsCount={5}
@@ -69,7 +71,6 @@ function Review(props) {
         <p>{review.advice}</p>
 
         <p> Work for a while {review.lengthofEmployment} years. </p>
-        
       </div>
     </>
   );

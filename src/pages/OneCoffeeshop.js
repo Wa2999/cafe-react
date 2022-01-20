@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import img3 from "../img/img6.webp";
 import FollowModal from "../components/FollowModal";
 
-function OneCoffeeShop(props) {
+function OneCoffeeShop() {
   const { coffeeShopId } = useParams();
   const [show, setShow] = useState(false);
   const { profile, cafes, followcafe } = useContext(CoffeeContext);

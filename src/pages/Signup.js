@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import CoffeeContext from "../utils/CoffeeContext";
-import img from "../img/img3.webp";
-import img2 from "../img/img2.webp";
-import { Box, Button, TextField } from "@material-ui/core";
+import { Box, TextField } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 function Signup() {
