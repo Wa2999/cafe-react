@@ -1,18 +1,15 @@
 import img from "../img/clear.png";
 import img2 from "../img/check.png";
 import { Rating } from "react-simple-star-rating";
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import CoffeeContext from "../utils/CoffeeContext";
 
 function Review(props) {
-  const { profile } = useContext(CoffeeContext);
   const { review } = props;
 
   return (
     <>
       <div class="viewreview">
-        <Link to={`/profile/${profile.reviews.user}`}>
+        <Link to={`/profile/${profile._id}`}>
           <b className="nameuser">
             {review.user.firstName} {review.user.lastName}
           </b>

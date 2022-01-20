@@ -15,6 +15,7 @@ import firebase from "./utils/firebase";
 import AddReview from "./pages/AddReview";
 import Follows from "./pages/Follows";
 import EmailVerified from "./components/EmailValidate";
+import OneProfile from "./pages/oneProfile";
 
 function App() {
   const [cities, setCity] = useState([]);
@@ -301,6 +302,8 @@ function App() {
           <Route path="/review/:cafeid" element={<AddReview />} />
           <Route path="/follows" element={<Follows />} />
           <Route path="/email_verified/:token" element={<EmailVerified />} />
+          <Route path="/profile/:profileId" element={<OneProfile />} />
+
         </Routes>
       </CoffeeContext.Provider>
     </>
