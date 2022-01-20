@@ -9,11 +9,16 @@ function OneProfile() {
   const { profileId } = useParams();
   const [profile, setProfile] = useState(false);
 
-//   const profilefound = profile.find((p) => p._id === profileId);
+  //   const profile = profile?._id === profileId
 
-  const getProfileById = async (profileId) => {
+  const getProfileById = async () => {
     const response = await axios.get(
-      `https://cafe-api-299.herokuapp.com/api/auth/profile/${profileId}`
+      `https://cafe-api-299.herokuapp.com/api/auth/profile/${profileId}`,
+      {
+        headers: {
+          Authorization: localStorage.tokenCoffee,
+        },
+      }
     );
 
     setProfile(response.data);
@@ -23,25 +28,27 @@ function OneProfile() {
     getProfileById();
   }, []);
 
+  if (!profile) return <h1>loding...</h1>;
+
   return (
     <>
       <header>
         <div class="container">
           <div class="profile">
             <div class="profile-image">
-              <img src={profilefound.avatar} />
+              <img src={profile.avatar} />
             </div>
 
             <div class="profile-user-settings">
               <h1 class="profile-user-name">
-                {profilefound.firstName} {profilefound.lastName}
+                {profile.firstName} {profile.lastName}
               </h1>
             </div>
 
             <div class="profile-stats">
               <Link to="/follows">
                 <span class="profile-stat-count">
-                  {profilefound.follows.length} Following
+                  {profile.follows.length} Following
                 </span>
               </Link>
             </div>
@@ -51,7 +58,7 @@ function OneProfile() {
       <div className="profile-rev">
         <img src={img3} />
         <h2 class="titelreview"> Reviews</h2>
-        {profilefound.reviews.map((review) => (
+        {profile?.reviews?.map((review) => (
           <div className="mb-2">
             <Review review={review} />
           </div>
