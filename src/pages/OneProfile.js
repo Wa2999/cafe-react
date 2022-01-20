@@ -8,9 +8,8 @@ import { Link } from "react-router-dom";
 function OneProfile() {
   const { profileId } = useParams();
   const [profile, setProfile] = useState(false);
-//   const navigate = useNavigate();
 
-  const profilefound = profile.find(profile=>profile._id===profileId)
+  const profilefound = profile.find((p) => p._id === profileId);
 
   const getProfileById = async (profileId) => {
     const response = await axios.get(
@@ -30,7 +29,7 @@ function OneProfile() {
 
   return (
     <>
-     <header>
+      <header>
         <div class="container">
           <div class="profile">
             <div class="profile-image">
@@ -55,7 +54,7 @@ function OneProfile() {
       </header>
       <div className="profile-rev">
         <img src={img3} />
-        <h2 class="titelreview">  Reviews</h2>
+        <h2 class="titelreview"> Reviews</h2>
         {profilefound.reviews.map((review) => (
           <div className="mb-2">
             <Review review={review} />
@@ -63,8 +62,7 @@ function OneProfile() {
         ))}
       </div>
     </>
-   
-  )
+  );
 }
 
 export default OneProfile;
