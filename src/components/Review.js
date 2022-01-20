@@ -4,13 +4,13 @@ import { Rating } from "react-simple-star-rating";
 import { Link } from "react-router-dom";
 
 function Review(props) {
-  const { review } = props;
+  const { review,profile } = props;
 
   return (
     <>
       <div class="viewreview">
         <Link to={`/profile/${profile._id}`}>
-          <b>
+          <b className="nameuser">
             {review.user.firstName} {review.user.lastName}
           </b>
         </Link>

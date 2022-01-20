@@ -258,6 +258,11 @@ border:2px solid #CBD1D7;}
   padding:20px;
   gap:50px;
 }
+.nameuser{
+  text-decoration: none;
+  color:#593523;
+  padding: 10px;
+}
 .addrev h1{
   margin-top: 20px;
   color:#593523;
