@@ -9,15 +9,6 @@ function Review(props) {
   const { review } = props;
   const { deleteReview, profile } = useContext(CoffeeContext);
 
-  if (!profile) return <h3>Loading</h3>;
-  if (!review) return <h3>Loading</h3>;
-
-  let user;
-  if (review.user == profile._id) {
-    user = true;
-  } else user = false;
-
-  console.log(user);
   return (
     <>
       <div class="viewreview">
