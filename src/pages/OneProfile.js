@@ -9,7 +9,7 @@ function OneProfile() {
   const { profileId } = useParams();
   const [profile, setProfile] = useState(false);
 
-  const profilefound = profile.find((p) => p._id === profileId);
+//   const profilefound = profile.find((p) => p._id === profileId);
 
   const getProfileById = async (profileId) => {
     const response = await axios.get(
