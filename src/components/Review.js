@@ -2,9 +2,12 @@ import img from "../img/clear.png";
 import img2 from "../img/check.png";
 import { Rating } from "react-simple-star-rating";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import CoffeeContext from "../utils/CoffeeContext";
 
 function Review(props) {
   const { review } = props;
+  const {profile}= useContext(CoffeeContext);
 
   return (
     <>
