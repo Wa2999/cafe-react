@@ -13,13 +13,9 @@ function OneProfile() {
 
   const getProfileById = async (profileId) => {
     const response = await axios.get(
-      `https://cafe-api-299.herokuapp.com/api/auth/profile/${profileId}`,
-      {
-        headers: {
-          Authorization: localStorage.tokenCoffee,
-        },
-      }
+      `https://cafe-api-299.herokuapp.com/api/auth/profile/${profileId}`
     );
+
     setProfile(response.data);
   };
 
