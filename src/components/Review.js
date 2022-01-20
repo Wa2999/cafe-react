@@ -68,11 +68,7 @@ function Review(props) {
         <p>{review.advice}</p>
 
         <p> Work for a while {review.lengthofEmployment} years. </p>
-        {user === true ? (
-          <button onClick={() => deleteReview(review._id)} className="del-rev">
-            Delete
-          </button>
-        ) : null}
+        
       </div>
     </>
   );
