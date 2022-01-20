@@ -28,7 +28,7 @@ function OneProfile() {
     getProfileById();
   }, []);
 
-  if (!profile) return <h1>loding...</h1>;
+  if (!profile) return <div className="loader"></div>;
 
   return (
     <>
@@ -57,12 +57,6 @@ function OneProfile() {
       </header>
       <div className="profile-rev">
         <img src={img3} />
-        <h2 class="titelreview"> Reviews</h2>
-        {profile?.reviews?.map((review) => (
-          <div className="mb-2">
-            <Review review={review} />
-          </div>
-        ))}
       </div>
     </>
   );
