@@ -12,7 +12,7 @@ function Review(props) {
   return (
     <>
       <div class="viewreview">
-        <Link to={`/review/${profile._id}`}>
+        <Link to={`/profile/${profile._id}`}>
           <b className="nameuser">
             {review.user.firstName} {review.user.lastName}
           </b>
