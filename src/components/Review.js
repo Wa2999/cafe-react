@@ -1,5 +1,4 @@
 import { useContext } from "react";
-
 import CoffeeContext from "../utils/CoffeeContext";
 import img from "../img/clear.png";
 import img2 from "../img/check.png";
