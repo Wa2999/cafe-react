@@ -1,13 +1,10 @@
-import { useContext } from "react";
-import { Button } from "react-bootstrap";
-import CoffeeContext from "../utils/CoffeeContext";
 import img from "../img/clear.png";
 import img2 from "../img/check.png";
 import { Rating } from "react-simple-star-rating";
+import { Link } from "react-router-dom";
 
-function ReviewProfile(props) {
+function Review(props) {
   const { review } = props;
-  const { deleteReview } = useContext(CoffeeContext);
 
   return (
     <>
@@ -71,13 +68,9 @@ function ReviewProfile(props) {
         <p>{review.advice}</p>
 
         <p> Work for a while {review.lengthofEmployment} years. </p>
-
-        <button onClick={() => deleteReview(review._id)} className="del-rev">
-          Delete
-        </button>
       </div>
     </>
   );
 }
 
-export default ReviewProfile;
+export default Review;

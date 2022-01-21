@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import Review from "../components/Review";
+import { useParams } from "react-router-dom";
 import img3 from "../img/img6.webp";
 import { Link } from "react-router-dom";
+import ReviewUser from "../components/ReviewUser";
 
 function OneProfile() {
   const { profileId } = useParams();
@@ -55,6 +55,12 @@ function OneProfile() {
       </header>
       <div className="profile-rev">
         <img src={img3} />
+        <h2 class="titelreview"> My Reviews</h2>
+        {profile.reviews.map((review) => (
+          <div className="mb-2">
+            <ReviewUser review={review} />
+          </div>
+        ))}
       </div>
     </>
   );
