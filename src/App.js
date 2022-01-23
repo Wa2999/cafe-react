@@ -126,25 +126,7 @@ function App() {
       else console.log(error);
     }
   };
-
-  const deleteReview = async (reviewId) => {
-    try {
-      await axios.delete(
-        `https://cafe-api-299.herokuapp.com/api/review/${reviewId}`,
-        {
-          headers: {
-            Authorization: localStorage.tokenCoffee,
-          },
-        }
-      );
-      toast.success("reviwe deleted");
-      getProfile();
-      getCafe();
-    } catch (error) {
-      if (error.response) toast.error(error.response.data);
-      else console.log(error);
-    }
-  };
+ 
   const signup = async (e) => {
     e.preventDefault();
     try {
@@ -268,6 +250,7 @@ function App() {
     cafes,
     deleteReview,
     addReview,
+    eidtReview,
   };
   return (
     <>

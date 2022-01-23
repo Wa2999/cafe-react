@@ -6,6 +6,7 @@ import img3 from "../img/img6.webp";
 import { Link } from "react-router-dom";
 import ReviewProfile from "../components/ReviewProfile";
 
+
 function Profile() {
   const { profile } = useContext(CoffeeContext);
   const [show, setShow] = useState(false);
@@ -49,6 +50,8 @@ function Profile() {
         {profile.reviews.map((review) => (
           <div className="mb-2">
             <ReviewProfile review={review} fromprofile={profile}  />
+            
+
           </div>
         ))}
       </div>

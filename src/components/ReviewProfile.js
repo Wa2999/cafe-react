@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { Button } from "react-bootstrap";
+import { useContext, useState } from "react";
 import CoffeeContext from "../utils/CoffeeContext";
 import img from "../img/clear.png";
 import img2 from "../img/check.png";
@@ -8,6 +7,9 @@ import { Rating } from "react-simple-star-rating";
 function ReviewProfile(props) {
   const { review } = props;
   const { deleteReview } = useContext(CoffeeContext);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <>
