@@ -6,7 +6,6 @@ function Rating() {
   const [rating, setRating] = useState(0);
 
   const handelRating = async (rating) => {
-    console.log(rating);
     setRating(rating);
   };
   return (

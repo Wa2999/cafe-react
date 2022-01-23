@@ -19,7 +19,6 @@ import OneProfile from "./pages/OneProfile";
 
 function App() {
   const [cities, setCity] = useState([]);
-  const [reviews, setReview] = useState([]);
   const [cafes, setCafe] = useState([]);
   const [profile, setProfile] = useState(null);
 
@@ -48,21 +47,10 @@ function App() {
       console.log(error?.response?.data);
     }
   };
-  const getReviwes = async () => {
-    try {
-      const response = await axios.get(
-        `https://cafe-api-299.herokuapp.com/api/review`
-      );
-      setReview(response.data);
-      console.log(response.data);
-    } catch (error) {
-      console.log(error?.response?.data);
-    }
-  };
+
   useEffect(() => {
     getCities();
     getCafe();
-    getReviwes();
     getProfile();
   }, []);
 
@@ -273,7 +261,6 @@ function App() {
     cities,
     login,
     signup,
-    reviews,
     profile,
     logout,
     editProfile,
@@ -303,7 +290,6 @@ function App() {
           <Route path="/follows" element={<Follows />} />
           <Route path="/email_verified/:token" element={<EmailVerified />} />
           <Route path="/profile/:profileId" element={<OneProfile />} />
-
         </Routes>
       </CoffeeContext.Provider>
     </>

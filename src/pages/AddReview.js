@@ -39,10 +39,9 @@ function AddReview() {
     console.log(rating);
     setratingBenefits(rating);
   };
-  console.log(cafes);
+  
   const cafeId = cafes.find((cafe) => cafe._id === cafeid);
 
-  console.log(cafeId);
   return (
     <div className="review">
       

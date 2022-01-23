@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 function CoffeshopCard(props) {
   const { coffeeShope } = props;
   if (!coffeeShope) return <div className="loader"></div>;
-  console.log(coffeeShope);
   return (
     <>
       <div>
