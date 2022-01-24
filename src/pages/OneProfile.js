@@ -52,7 +52,7 @@ function OneProfile() {
       </header>
       <div className="profile-rev">
         <img src={img3} />
-        <h2 class="titelreview"> My Reviews</h2>
+        <h2 class="titelreview"> Reviews</h2>
         {profile.reviews.map((review) => (
           <div className="mb-2">
             <ReviewUser review={review} />
