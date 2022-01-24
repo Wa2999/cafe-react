@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import img3 from "../img/img6.webp";
-import { Link } from "react-router-dom";
 import ReviewUser from "../components/ReviewUser";
 
 function OneProfile() {
@@ -44,11 +43,9 @@ function OneProfile() {
             </div>
 
             <div class="profile-stats">
-              <Link to="/follows">
-                <span class="profile-stat-count">
-                  {profile.follows.length} Following
-                </span>
-              </Link>
+              <span class="profile-stat-count">
+                {profile.follows.length} Following
+              </span>
             </div>
           </div>
         </div>
