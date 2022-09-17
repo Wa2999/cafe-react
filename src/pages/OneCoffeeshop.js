@@ -23,6 +23,7 @@ function OneCoffeeShop() {
       <div className="oneCafe">
         <img src={cafefound.image} /> <h3>{cafefound.name}</h3>
         <p className="follows">{cafefound.follows.length} Followers</p>
+        
         <div class="btns">
           {profile ? (
             <>

@@ -58,16 +58,33 @@
   }
   /* login & signup*/
 
-  .logindiv {
-    width: 100%;
-    margin-bottom: 250px;
+  input {
+    width: 30%;
+  padding: 12px 20px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(230, 227, 227); 
+  margin-top: 20px;
 }
-.mdc-button{
+.logindiv{
+  text-align: center;
+
+}
+
+.button2{
   color:#FFFFFF;
-  background-color:#6B513F;
-  border-color:#6B513F ;
-  width: 100%;
+  background-color:#797069;
+  border: none;
+  width: 25%;
   height: 40px;
+  margin-top: 25px;
+  transition-duration: 0.4s;
+}
+.button2:hover {
+  background-color:#9E8070;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .unLogin {
   color:#696969;
@@ -76,6 +93,10 @@
 .unLogin a {
   text-decoration:none;
   color:#7B3914;
+}
+.unLogin a:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 
 }
 .logindiv h1{
@@ -314,12 +335,6 @@ display: flex;
 justify-content: center;
 border: solid 1px #ccc;
 }
-.cafetitle{
-text-align: center;	
-  color: #7B3914;
-margin-top:100px;
-
-}
 .cafe-img{
 	display: block;
 	margin-left: auto;
@@ -329,6 +344,13 @@ margin-top:100px;
 	width: 100px;
 	height: 100px;
 }
+.cafetitle{
+  text-align: center;	
+    color: #7B3914;
+  margin-top:100px;
+  
+  }
+
 .revpage{
   display: inline;
   padding:20px;
@@ -428,3 +450,70 @@ body {
 
 }
 /* ............. */
+@media screen and (max-width: 480px){
+  #citytop{
+    margin-top:200px;
+  }
+  .cards{
+    display: flex;
+    justify-content:center;
+    gap:40px;
+
+  }
+  .footerdiv{
+    margin-bottom:350px;
+    width: 100%;
+
+  }
+  .footerdiv h5{
+    text-align: center;
+  }
+  input {
+    width: 60%;
+  padding: 12px 20px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(230, 227, 227); 
+  margin-top: 20px;
+}
+.profile {
+	padding: 2rem 0;
+  background-color:#F9FAE4;
+
+}
+.container {
+	max-width: 80.5rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+.profile-image img {
+	border-radius: 50%;
+  width:100px;
+  height: 100px;
+}
+.follow-profile{
+  display: flex;
+  flex-direction: column;
+  float: left;
+  padding:70px;
+  margin: 70px;
+	border: 0.1rem solid #dbdbdb;
+}
+.oneCafe{
+	display: flex;
+	margin:35px;
+	padding:50px;
+	gap:20px;
+	border-style: ridge;
+	border-top: white;
+	
+}
+
+  .btns{
+    display: flex;
+    margin-left: -100px;
+    margin-top: 50px;
+    gap:20px;
+  }
+}
