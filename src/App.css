@@ -330,19 +330,25 @@ border:2px solid #CBD1D7;}
 margin-top:25px;
 padding: 50px;
 margin: 80px;
-margin-bottom: 200px;
-display: flex;
-justify-content: center;
 border: solid 1px #ccc;
+display: flex;
+flex-wrap: wrap;
+gap:15px;
 }
 .cafe-img{
-	display: block;
+	/* display: block;
 	margin-left: auto;
 	margin-right: auto;
 	 float: left;
 	padding:15px;
 	width: 100px;
+	height: 100px; */
+  margin: auto;
+	width: 100px;
 	height: 100px;
+  aspect-ratio: 1/1;
+  max-width:190px;
+  object-fit: cover;
 }
 .cafetitle{
   text-align: center;	
