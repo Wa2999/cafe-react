@@ -60,25 +60,45 @@ function Signup() {
     //     </Box>
     //   </form>
     // </>
-  
-  <>
-  <form onSubmit={signup} className="logindiv">
-    <h1>SIGIN UP</h1>
-    <input type="text" name="firstName" placeholder="First Name*" required></input><br/>
-    <input type="text" name="lastName" placeholder="LAST Name*" required></input><br/>
-    <input type="email" name="email" placeholder="EMAIL*" required></input><br/>
-    <input type="password" name="password" placeholder="PASSWORD*" required></input><br/>
-    <input type="file" name="avatar" placeholder="AVATAR" required></input><br/>
-    
-      <button class="button2" type="submit">
-        SIGIN UP
-      </button><br/>
-      <p className="unLogin">
-        Already have an account? <Link to="/login">SignIn</Link>
-      </p>
-    
-  </form>
-</>
+
+    <>
+      <form onSubmit={signup} className="logindiv">
+        <h1>SIGIN UP</h1>
+        <input
+          type="text"
+          name="firstName"
+          placeholder="First Name*"
+          required
+        ></input>
+        <br />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="LAST Name*"
+          required
+        ></input>
+        <br />
+        <input type="email" name="email" placeholder="EMAIL*" required></input>
+        <br />
+        <input
+          type="password"
+          name="password"
+          placeholder="PASSWORD*"
+          required
+        ></input>
+        <br />
+        <input type="file" name="avatar" placeholder="AVATAR"></input>
+        <br />
+
+        <button class="button2" type="submit">
+          SIGIN UP
+        </button>
+        <br />
+        <p className="unLogin">
+          Already have an account? <Link to="/login">SignIn</Link>
+        </p>
+      </form>
+    </>
   );
 }
 
