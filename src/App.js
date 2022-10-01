@@ -126,7 +126,7 @@ function App() {
       else console.log(error);
     }
   };
- 
+
   const deleteReview = async (reviewId) => {
     try {
       await axios.delete(
@@ -149,23 +149,23 @@ function App() {
     e.preventDefault();
     try {
       const form = e.target;
-      // const image = form.elements.avatar.files[0];
-      // let imageUrl;
-      // if (image) {
-      //   const imageRef = firebase
-      //     .storage()
-      //     .ref("images")
-      //     .child(`${image.lastModified}-${image.name}`);
-      //   await imageRef.put(image);
-      //   imageUrl = await imageRef.getDownloadURL();
-      // }
+      const image = form.elements.avatar.files[0];
+      let imageUrl;
+      if (image) {
+        const imageRef = firebase
+          .storage()
+          .ref("images")
+          .child(`${image.lastModified}-${image.name}`);
+        await imageRef.put(image);
+        imageUrl = await imageRef.getDownloadURL();
+      }
 
       const userBody = {
         firstName: form.elements.firstName.value,
         lastName: form.elements.lastName.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
-        // avatar: imageUrl || undefined,
+        avatar: imageUrl || undefined,
       };
       await axios.post(
         "https://cafe-api-299.herokuapp.com/api/auth/signup",
@@ -268,7 +268,6 @@ function App() {
     cafes,
     deleteReview,
     addReview,
-  
   };
   return (
     <>
