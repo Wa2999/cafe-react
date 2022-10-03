@@ -467,9 +467,9 @@ body {
 
   }
   .footerdiv{
-    margin-bottom:350px;
     width: 100%;
-
+  bottom: 0;
+  margin-top: 300px;
   }
   .footerdiv h5{
     text-align: center;
