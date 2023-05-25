@@ -27,7 +27,7 @@ function App() {
   const getCities = async () => {
     try {
       const response = await axios.get(
-        "https://cafe-api-299.herokuapp.com/api/cities"
+        `https://cafe-api-299.herokuapp.com/api/cities/${id}`
       );
       setCity(response.data);
       console.log(response.data);
